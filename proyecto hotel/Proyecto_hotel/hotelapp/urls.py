@@ -17,11 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from rest_framework import routers
-from .views import index,pagina2
+from .views import index,pagina2,pagina3
 
 router = routers.DefaultRouter()
 urlpatterns = [
     path('', index,name='index'),
-    path('nombreejemplo2',pagina2,name='nombreredireccionpagina2') 
+    path('nombreejemplo2',pagina2,name='nombreredireccionpagina2'),
+    path('pagina3',pagina3,name='nombreredireccionpagina3')  
     #path('sub url',view, name="nombre")  
 ]
