@@ -15,8 +15,26 @@ def pagina2(request):
     return render (request,'2.html',context)
 
 
-def pagina3(request):
+def InicioDeSesion(request):
     context={}
-    return render (request,'3.html',context)
+    return render (request,'InicioDeSesion.html',context)
 
+def RegUsuario(request):
+    context={}
+    return render (request,'RegUsuario.html',context)
 
+def Perfil(request):
+    context={}
+    return render (request,'Perfil.html',context)
+
+def ListaUsuarios(request):
+    context={}
+    return render (request,'ListaUsuarios.html',context)
+
+def RegReservas(request):
+    context={}
+    return render (request,'RegReservas.html',context)
+
+def Catalogo(request):
+    context={}
+    return render (request,'Catalogo.html',context)
