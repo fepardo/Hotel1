@@ -4,39 +4,38 @@ var mensaje5 = document.getElementById("pass-ini");
 
 
 
-formulario.addEventListener('submit',e=>{
-console.log('summit')
+formulario.addEventListener('submit', e => {
+    console.log('summit')
     let mjsMostrar = "";
-    let enviar = false;
+    let enviar = true;
 
 
 
-//comienzo validaciones
+    //comienzo validaciones
 
-//mail
+    //mail
     var email = document.getElementById("correo-inicio");
-    if(email.value === ""){
+    if (email.value === "") {
         mjsMostrar = "Debe agregar un email";
-        enviar = true;
-    }else{ //retornar el estado sin aviso, enviar = false
-        mjsMostrar = "";
         enviar = false;
+    } else { //retornar el estado sin aviso, enviar = false
+        mjsMostrar = "";
+        enviar = true;
     }
-    if(enviar){
-        mensaje4.innerHTML = mjsMostrar;
-    }
-// //contraseña
-var pass = document.getElementById("pass-inicio");
-    if(pass.value === ""){
+    mensaje4.innerHTML = mjsMostrar;
+    // //contraseña
+    let enviar2 = true;
+    var pass = document.getElementById("pass-inicio");
+    if (pass.value === "") {
         mjsMostrar = "Debe agregar una contraseña";
-        enviar = true;
-    }else{ //retornar el estado sin aviso, enviar = false
+        enviar2 = false;
+    } else { //retornar el estado sin aviso, enviar = false
         mjsMostrar = "";
-        enviar = false;
+        enviar2 = true;
     }
-    if(enviar){
-        mensaje5.innerHTML = mjsMostrar;
-    }
-    //if(!enviar){e.preventDefault();}
     
+        mensaje5.innerHTML = mjsMostrar;
+
+    if (!enviar||!enviar2) { e.preventDefault(); }
+
 });

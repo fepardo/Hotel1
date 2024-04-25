@@ -63,10 +63,10 @@
               <h5>{{ user.username }}</h5>
 
               
-              <p>Rol: {{ perfil.rolusuario.descripcion }}</p>
+              <p>Rol: {{ perfil.rol.nombre }}</p>
               <a href= "" class="far fa-edit mb-5" ></a>
               <div class="col-12 mb-3">
-                <a class="btn btn btn-danger" aria-current="page" href="">Cerrar Sesión</a> 
+                <a class="btn btn btn-danger" aria-current="page" href="{%url 'cerrarsesion' %}">Cerrar Sesión</a> 
               </div>
             </div>
             <div class="col-md-8">
@@ -80,7 +80,7 @@
                   <div class="row pt-1">
                     <div class="col-12 mb-3">
                       <h6>Email</h6>
-                      <p class="col-12 text-muted">{{ perfil.mail }}</p>
+                      <p class="col-12 text-muted">{{ perfil.correo }}</p>
                     </div>
 
                   </div>
@@ -88,13 +88,16 @@
                   <hr class="mt-0 mb-4">
                   <div class="row pt-1">
                     <div class="col-6 mb-3">
-                      <h6>Direccion: </h6>
-                      <p class="text-muted">{{ perfil.direccion }}</p>
+                      <h6>Telefono: </h6>
+                      <p class="text-muted">{{ perfil.telefono }}</p>
                     </div>
-                    {% if perfil.rolusuario.Idrol == 1 %}
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                      <a class="btn btn btn-primary" aria-current="page" href="{%url 'listadoUsuarios' %}">Editar Usuarios</a>
-                      <a class="btn btn btn-primary" aria-current="page" href="{%url 'listadoLibros' %}">Editar Stock</a>
+                      <a class="btn btn btn-primary" aria-current="page" href="{%url 'nombreredireccionpagina2' %}">Catalogo</a>
+                    </div>
+
+                    {% if perfil.rol.id == 1 %}
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                      <a class="btn btn btn-primary" aria-current="page" href="{%url 'RegReservas' %}">Editar reservas</a>
                     </div>
                     
                     {% endif %} 

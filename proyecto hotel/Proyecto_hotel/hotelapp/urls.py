@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from rest_framework import routers
-from .views import index,pagina2,InicioDeSesion,RegUsuario,Perfil,ListaUsuarios,RegReservas,Catalogo
+from .views import index,pagina2,InicioDeSesion,RegUsuario,Perfil,ListaUsuarios,RegReservas,Catalogo,cerrarsesion
 
 router = routers.DefaultRouter()
 urlpatterns = [
@@ -28,6 +28,7 @@ urlpatterns = [
     path('Perfil',Perfil,name='Perfil'),
     path('ListaUsuarios',ListaUsuarios,name='ListaUsuarios'),
     path('RegReservas',RegReservas,name='RegReservas'),
-    path('Catalogo',Catalogo,name='Catalogo')    
+    path('Catalogo',Catalogo,name='Catalogo'),
+    path('cerrarsesion/', cerrarsesion,name="cerrarsesion")   
     #path('sub url',view, name="nombre")  
 ]
