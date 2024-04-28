@@ -21,7 +21,7 @@ from .views import index,pagina2,InicioDeSesion,RegUsuario,Perfil,ListaUsuarios,
 
 router = routers.DefaultRouter()
 urlpatterns = [
-    path('', index,name='index'),
+    path('',InicioDeSesion,name='index'),
     path('nombreejemplo2',pagina2,name='nombreredireccionpagina2'),
     path('InicioDeSesion',InicioDeSesion,name='InicioDeSesion'),
     path('RegUsuario',RegUsuario,name='RegUsuario'),
