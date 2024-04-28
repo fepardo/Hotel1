@@ -67,36 +67,30 @@
 <div class="container">
     <h1> Catálogo</h1>
     <div class="row">
+
+      {% for habitacion in habitaciones %}  
         <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-            <div class="card" >
-                <img src="{%static 'img/habitaciondoble.jpg' %}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
+            <div class="card" id={{habitacion.habitacion_id}}>
+
+              <img src="/static/img/{{habitacion.nombre}}.png">
+
+              <td>{{habitacion.nombre}}</td> <br>
+              <td>{{habitacion.descripcion}}</td> <br>
+              <td>{{habitacion.n_banos}}</td> <br>
+              <td>{{habitacion.metroscuadrados}}</td> <br>
+
+              <td>{% if habitacion.disponibilidad == 1 %} Disponible {% endif %} 
+                {% if habitacion.disponibilidad == 0 %} No disponible {% endif %}
+              </td> <br>
+              
+              
+              <td>{{habitacion.tarifa}}</td> <br>
+
+              <a href="{% url 'Reservar' habitacion.habitacion_id %}"> <button>Reservar</button> </a>
+                
             </div>        
         </div>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-            <div class="card" >
-                <img src="{%static 'img/habitacion1.jpeg' %}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>        
-        </div>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-            <div class="card" >
-                <img src="{%static 'img/instastay.png' %}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>        
-        </div>
+       {% endfor %} 
     </div>
 </div>
 

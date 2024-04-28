@@ -51,10 +51,32 @@
   <h1>Registro de reservas</h1>
 
   <div class="card color-form">
+    {% for Reserva in reservas %}
 
-    <h1>linea prueba 1</h1>
-    <h1>linea prueba 2</h1>
+    <td>{{Reserva.id_reserva}}</td>
 
+    <td>{{Reserva.cliente.nombre}}</td> 
+
+    <td>{{Reserva.cliente.appellido}}</td> 
+    
+    
+    <td>{{Reserva.id_habitacion.nombre}}</td> 
+
+    <td>{{Reserva.fecha_inicio}}</td> 
+
+    <td>{{Reserva.fecha_termino}}</td> 
+
+
+
+    <br>
+
+
+
+
+
+    
+
+    {% endfor %}
 
 
   </div>
