@@ -28,9 +28,6 @@
             <a class="nav-link active" aria-current="page" href="{%url 'InicioDeSesion' %}">Inicio de Sesión</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{%url 'ListaUsuarios' %}">Lista de usuarios</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{%url 'Perfil' %}">Perfil</a>
           </li>
           <li class="nav-item">
@@ -58,40 +55,38 @@
         <a class="btn btn-danger buttonForm" href="">Agregar usuario</a>
         <br>
         <br>
-        {% if messages %}
+        <!-- {% if messages %}
         {% for message in messages %}
         <div class="alert alert-{{ message.tags }} alert-dismissible fade show"  role="alert">
           {{ message }}
           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" ></button>
         </div> 
         {% endfor %}
-        {% endif %}
+        {% endif %} -->
         <table class="table table-striped table-hover table-responsive-sm ">
             <thead>
               <tr>
-                <th scope="col">Código ISBN</th>
-                <th scope="col">Imagen</th>
-                <th scope="col">Nombre Libro</th>
-                <th scope="col">Autor</th>
-                <th scope="col">Precio</th>
-                <th scope="col">Cantidad</th>
+                <th scope="col">Id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Correo</th>
+                <th scope="col">Teléfono</th>
+                <th scope="col">Rol</th>
               </tr>
             </thead>
             <tbody>
               
-              {% for libro in libros %}
+              {% for Usuario in usuarios %}
               <tr>
-                <th scope="row">{{libro.codISBN}} </th>
-                <td>
-                    <img src="{{ libro.imagenLib }}" width='100px'/>
-                </td>
-                <td>{{libro.nombreLib}}</td>
-                <td>{{libro.autorLib}}</td>
-                <td>{{libro.precioLib}}</td>
-                <td>{{libro.cantidadLib}}</td>
+                <td>{{Usuario.usuario_id}} </td>
+                <td>{{Usuario.nombre}}</td>
+                <td>{{Usuario.appellido}}</td>
+                <td>{{Usuario.correo}}</td>
+                <td>{{Usuario.telefono}}</td>
+                <td>{{Usuario.rol}}</td>
                 
-                <td><a class="btn btn btn-primary " href="{% url 'editarLibro' libro.codISBN %}">Editar</a></td>
-                <td><a class="btn btn btn-danger " href="{% url 'eliminarLibro' libro.codISBN %}">Eliminar</a></td>
+                <!-- <td><a class="btn btn btn-primary " href="{% url 'editarLibro' libro.codISBN %}">Editar</a></td>
+                <td><a class="btn btn btn-danger " href="{% url 'eliminarLibro' libro.codISBN %}">Eliminar</a></td> -->
                 <td></td>
                 </tr>
                 {% endfor %}

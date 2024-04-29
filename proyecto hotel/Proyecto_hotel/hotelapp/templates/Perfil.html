@@ -27,9 +27,6 @@
           <a class="nav-link active" aria-current="page" href="{%url 'InicioDeSesion' %}">Inicio de Sesión</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{%url 'ListaUsuarios' %}">Lista de usuarios</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="{%url 'Perfil' %}">Perfil</a>
         </li>
         <li class="nav-item">
@@ -100,8 +97,8 @@
 
                     {% if perfil.rol.id == 1 %}
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                      <a class="btn btn-primary buttonForm" aria-current="page" href="{%url 'RegReservas' %}">Registro de reservas</a>
-                      <a class="btn btn-primary buttonForm" aria-current="page" href="{%url 'ListaUsuarios' %}">Lista de Usuario</a>
+                      <a class="btn btn-danger buttonForm" aria-current="page" href="{%url 'RegReservas' %}">Registro de reservas</a>
+                      <a class="btn btn-danger buttonForm" aria-current="page" href="{%url 'ListaUsuarios' %}">Lista de Usuarios</a>
                     </div>
                     
                     {% endif %} 
