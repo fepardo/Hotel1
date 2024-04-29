@@ -31,9 +31,6 @@
             <a class="nav-link active" aria-current="page" href="{%url 'Perfil' %}">Perfil</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{%url 'RegReservas' %}">Registro de reservas</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{%url 'RegUsuario' %}">Registro usuario</a>
           </li>
           
@@ -83,10 +80,9 @@
                 <td>{{Usuario.appellido}}</td>
                 <td>{{Usuario.correo}}</td>
                 <td>{{Usuario.telefono}}</td>
-                <td>{{Usuario.rol}}</td>
+                <td>{{Usuario.rol.nombre}}</td>
                 
-                <!-- <td><a class="btn btn btn-primary " href="{% url 'editarLibro' libro.codISBN %}">Editar</a></td>
-                <td><a class="btn btn btn-danger " href="{% url 'eliminarLibro' libro.codISBN %}">Eliminar</a></td> -->
+              
                 <td></td>
                 </tr>
                 {% endfor %}

@@ -75,6 +75,7 @@ def Perfil(request):
 
 def ListaUsuarios(request):
     context={}
+    context["usuarios"]= Usuario.objects.all()
     return render (request,'ListaUsuarios.html',context)
 
 def RegReservas(request):
