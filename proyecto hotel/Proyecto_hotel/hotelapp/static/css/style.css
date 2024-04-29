@@ -11,6 +11,12 @@
     border-color:  #e3866f; 
 }
 
+.buttonFormCerrarSesion {
+    background-color: #b51f1f; 
+    border-color: #e45e3e; 
+    color:white;
+    width: 100%;
+}
 /* body {
 
 
