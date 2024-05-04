@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 {% load static %}
   <head>
     <meta charset="utf-8">
@@ -20,25 +20,13 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{%url 'index' %}">Inicio</a>
-        </li>      
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{%url 'InicioDeSesion' %}">Inicio de Sesión</a>
-        </li>
+  
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="{%url 'Perfil' %}">Perfil</a>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{%url 'RegUsuario' %}">Registro usuario</a>
-        </li>
-        
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="buscar habitación" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Buscar</button>
-      </form>
+
     </div>
   </div>
 </nav>

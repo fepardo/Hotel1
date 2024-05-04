@@ -21,24 +21,12 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{%url 'index' %}">Inicio</a>
-          </li>      
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{%url 'InicioDeSesion' %}">Inicio de Sesión</a>
-          </li>
+      
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{%url 'Perfil' %}">Perfil</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{%url 'RegUsuario' %}">Registro usuario</a>
-          </li>
           
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="buscar habitación" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Buscar</button>
-        </form>
       </div>
     </div>
   </nav>
@@ -49,7 +37,7 @@
       <div class="card-body">
         <h1> Lista de Usuarios </h1>
 
-        <a class="btn btn-danger buttonForm" href="">Agregar usuario</a>
+        <a class="btn btn-danger buttonForm" href="{%url 'RegUsuario' %}">Agregar usuario</a>
         <br>
         <br>
         <!-- {% if messages %}
